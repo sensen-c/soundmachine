@@ -3,3 +3,5 @@ librosa==0.9.2
 numpy==1.23.5
 vosk==0.3.44
 Werkzeug==3.0.3
+matplotlib
+pandas
