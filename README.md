@@ -21,20 +21,20 @@ There is example wav file in ./third_listener_service/tmp
 ### Option 2: Local Testing
 
 1. **Clone the Project**
-   ```sh
-   git clone https://github.com/sensen-c/soundmachine.git
-   cd soundmachine/third_listener/third_listener_service
-   ```
+```sh
+git clone https://github.com/sensen-c/soundmachine.git
+cd soundmachine/third_listener/third_listener_service
+```
 
 2.**Install Required Packages**
 Ensure you have Python installed and use pip to install the necessary packages:
-   ```sh
-   pip install -r requirements.txt
+```sh
+pip install -r requirements.txt
 ```
 
 3.**Run the Service Locally**
-   ```sh
-   python third_listener/third_listener_service/main.py
+```sh
+python third_listener/third_listener_service/main.py
 ```
 
 
