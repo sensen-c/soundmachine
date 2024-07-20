@@ -9,8 +9,9 @@ Introducing **"A Third Listener"**, a machine learning model designed to analyze
 Resources used in the project are quoted in the Medium article's reference section.
 
 ## Want to Test Your Own WAV File?
-![image](https://github.com/user-attachments/assets/07c8143c-76ca-4cca-b20c-33e2746ebaa6)
-!There is example wav file in ./third_listener_service/tmp
+![image](https://github.com/user-attachments/assets/dc5f4425-62cc-4335-a0c7-370eb94da75c)
+
+There is example wav file in ./third_listener_service/tmp
 
 ### Option 1: Online Testing
 
@@ -20,18 +21,17 @@ Resources used in the project are quoted in the Medium article's reference secti
 ### Option 2: Local Testing
 
 1. **Clone the Project**
-
    ```sh
    git clone https://github.com/sensen-c/soundmachine.git
    cd soundmachine/third_listener/third_listener_service
 
-2.**Install Required Packages
+2.**Install Required Packages**
 Ensure you have Python installed and use pip to install the necessary packages:
    ```sh
-pip install -r requirements.txt
+   pip install -r requirements.txt
 
-3.**Run the Service Locally
+3.**Run the Service Locally**
    ```sh
-python third_listener/third_listener_service/main.py
+   python third_listener/third_listener_service/main.py
 
 
