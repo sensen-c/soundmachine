@@ -1,0 +1,68 @@
+<!doctype html>
+<!--
+ Copyright 2021 Google LLC
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<html>
+<head>
+  <title>Datastore and Firebase Auth Example</title>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <h1>Third Listener Classification Service Demo</h1>
+
+  <h2>Upload WAV File</h2>
+  <form id="uploadForm" enctype="multipart/form-data">
+    <input type="file" id="wavFile" name="wavFile" accept=".wav" required>
+    <button type="submit">Upload</button>
+  </form>
+
+  <h2>Prediction</h2>
+  <div id="response"></div>
+
+  <script>
+    document.getElementById('uploadForm').addEventListener('submit', async function(event) {
+      event.preventDefault();
+
+      const formData = new FormData();
+      const fileField = document.getElementById('wavFile');
+
+      formData.append('wavFile', fileField.files[0]);
+
+      const responseDiv = document.getElementById('response');
+      responseDiv.innerHTML = 'Uploading...';
+
+      try {
+        const response = await fetch('/upload', {
+          method: 'POST',
+          body: formData
+        });
+
+        if (!response.ok) {
+          throw new Error('Network response was not ok ' + response.statusText);
+        }
+
+        const data = await response.json();
+        responseDiv.innerHTML = JSON.stringify(data);
+      } catch (error) {
+        responseDiv.innerHTML = 'Error: ' + error.message;
+      }
+    });
+  </script>
+
+</body>
+</html>
