@@ -1,33 +1,37 @@
-SoundMachine
+# SoundMachine
 
-Medium Article: A Third Listener - Emotion Detection in Customer Support
+[Medium Article: A Third Listener - Emotion Detection in Customer Support](https://medium.com/@sensenchen0301/a-third-listener-emotion-detection-in-customer-support-5ee6fa5e963c)
 
-Background
+## Background
 
-Introducing “A Third Listener”, a machine learning model designed to analyze emotional cues in real-time during customer support interactions. By detecting emotional distress or dissatisfaction, the system can alert representatives or companies to adjust their approach, escalate the issue to experienced personnel, or modify the interaction strategy to better address the customer’s needs.
+Introducing **"A Third Listener"**, a machine learning model designed to analyze emotional cues in real-time during customer support interactions. By detecting emotional distress or dissatisfaction, the system can alert representatives or companies to adjust their approach, escalate the issue to experienced personnel, or modify the interaction strategy to better address the customer’s needs.
 
-Resources used in the project are quoted in the Medium article’s reference section.
+Resources used in the project are quoted in the Medium article's reference section.
 
-Want to Test Your Own WAV File?
+## Want to Test Your Own WAV File?
+![image](https://github.com/user-attachments/assets/07c8143c-76ca-4cca-b20c-33e2746ebaa6)
+!There is example wav file in ./third_listener_service/tmp
 
-Option 1: Online Testing
+### Option 1: Online Testing
 
-	1.	Visit Inference University.
-	2.	Note: We only support WAV file formats.
+1. Visit [Inference University](https://inferenceuniversity.ue.r.appspot.com/).
+2. Note: We only support WAV file formats.
 
-Option 2: Local Testing
+### Option 2: Local Testing
 
-	1.	Clone the Project
- git clone https://github.com/sensen-c/soundmachine.git
-cd soundmachine
+1. **Clone the Project**
 
+   ```sh
+   git clone https://github.com/sensen-c/soundmachine.git
+   cd soundmachine/third_listener/third_listener_service
 
-	2.	Install Required Packages
+2.**Install Required Packages
 Ensure you have Python installed and use pip to install the necessary packages:
+   ```sh
+pip install -r requirements.txt
 
-	3.	Run the Service Locally
-Navigate to the third_listener_service directory and run the main script:
+3.**Run the Service Locally
+   ```sh
 python third_listener/third_listener_service/main.py
 
-	4.	Reach the Endpoint
-Access the service endpoint to test your WAV files locally.
+
